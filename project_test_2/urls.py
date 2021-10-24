@@ -18,5 +18,9 @@ from django.urls import path
 
 urlpatterns = [
     path('', views.index),
-    path('watch/', views.watch_anime)
+    path('watch/', views.watch_anime),
+    path('search/<str:keyword>/<int:page>/', views.search),
+    path('date/<int:year>-<int:month>-<int:day>/', views.date),
+    path('redirect/<path:url>', views.redirect),
+    path('article/<int:id>/<slug:title>/', views.show_article)
 ]
